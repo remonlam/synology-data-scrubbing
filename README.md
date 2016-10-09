@@ -10,7 +10,7 @@ although it's not that hard, however it takes a bit more than just clicking some
 - Disable SSH
 
 ## Enable SSH on the NAS;
-Login to DSM (like; https://your-nas:5001/)
+Login to DSM (example; https://your-nas:5001/)
 
 ![Enable SSH](/docs/enable_ssh_nas.png)
 Open Control Panel and go to Terminal & SNMP, and make sure that Enabled SSH Service is checked (enabled)
@@ -43,7 +43,22 @@ Go back to the DSM (web console)
 
 Open Control Panel and go to Task Scheduler
 
+![Create task 1](/docs/create_task_1.png)
 Next, go to "Create" --> "Scheduled Taks" --> "User-defined script".
+
+![Create task 2](/docs/create_task_2.png)
+
+![Create task 3](/docs/create_task_3.png)
+
+![Create task 4](/docs/create_task_4.png)
+
+![Create task 5](/docs/create_task_5.png)
+
+![Create task 6](/docs/create_task_6.png)
+
+![Create task 7](/docs/create_task_7.png)
+
+
 
 
 ## Check if the script is executing a Data Scrubbing job
@@ -55,7 +70,7 @@ And select either Volumes or Disk Group and check if it's there are Parity Check
 NOTE: Depending on the amount of data stored on the disk and the total size of the disks this can take some time to complete...
 
 ## Disable SSH
-Becasue we don't need SSH to be open anymore it's security wise better to disable it.
+Because we don't need SSH to be open anymore it's security wise better to disable it.
 In DSM (web console) open the Control Panel
 
 ![Disable SSH](/docs/disable_ssh.png)
