@@ -11,6 +11,7 @@ although it's not that hard, however it takes a bit more than just clicking some
 
 ## Enable SSH on the NAS;
 Login to DSM (like; https://your-nas:5001/)
+
 ![Enable SSH](/docs/enable_ssh_nas.png)
 Open Control Panel and go to Terminal & SNMP, and make sure that Enabled SSH Service is checked (enabled)
 
@@ -47,6 +48,7 @@ Next, go to "Create" --> "Scheduled Taks" --> "User-defined script".
 
 ## Check if the script is executing a Data Scrubbing job
 In DSM (web console) open the Storage Manager
+
 ![Check if script is doing something](/docs/check_taks.png)
 And select either Volumes or Disk Group and check if it's there are Parity Check's running
 
@@ -55,5 +57,6 @@ NOTE: Depending on the amount of data stored on the disk and the total size of t
 ## Disable SSH
 Becasue we don't need SSH to be open anymore it's security wise better to disable it.
 In DSM (web console) open the Control Panel
+
 ![Disable SSH](/docs/disable_ssh.png)
 Uncheck "Enable SSH Service" and click on Apply, SSH is no disabled!
