@@ -9,11 +9,13 @@ although it's not that hard, however it takes a bit more than just clicking some
 - Run the script
 - Disable SSH
 
+
 ## Enable SSH on the NAS;
 Login to DSM (example; https://your-nas:5001/)
 
 ![Enable SSH](/docs/enable_ssh_nas.png)
 Open Control Panel and go to Terminal & SNMP, and make sure that Enabled SSH Service is checked (enabled)
+
 
 ### Create a SSH session to the NAS
 Use a terminal emulator like Terinal/Console for OSX/Linux of Putty for the Windows folks
@@ -23,8 +25,10 @@ and open a new session as root
 
 sudo su -
 
+
 ## Copy the "start_data_scrubbing.sh" to (for example) /volume1/start_data_scrubbing.sh
 wget -P /volume1/ https://raw.githubusercontent.com/remonlam/synology-data-scrubbing/master/start_data_scrubbing.sh
+
 
 ## Check if the script is executable
 Go to the location where the script has been stored (in this example it's /volume1)
@@ -38,27 +42,34 @@ root@nas:/volume1# ls -lh
 It it's not executable just run;
 chmod 755 start_data_scrubbing.sh
 
-## Create a scheduled task
-Go back to the DSM (web console)
 
-Open Control Panel and go to Task Scheduler
+## Create a scheduled task
+Go back to the DSM (web console).
 
 ![Create task 1](/docs/create_task_1.png)
-Next, go to "Create" --> "Scheduled Taks" --> "User-defined script".
+Open Control Panel and go to Task Scheduler
 
 ![Create task 2](/docs/create_task_2.png)
+Next, go to "Create" --> "Scheduled Taks" --> "User-defined script".
 
 ![Create task 3](/docs/create_task_3.png)
+Enter a name (for example; Data Scrubbing on node NAS) and make sure it runs as root!
 
 ![Create task 4](/docs/create_task_4.png)
+According Synology it's best to run Data Scrubbing once every month, so create a schedule that it run's every month.
 
 ![Create task 5](/docs/create_task_5.png)
+Optional is to get an email when the script has run.
+If you want this enter your mail address.
+
+The last step is to fill in the location of the script that have been copied earlier.
+In my example it's /storage1/start_data_scrubbing.sh and click on OK to create the task.
 
 ![Create task 6](/docs/create_task_6.png)
+Check if the tasks has been created.
 
 ![Create task 7](/docs/create_task_7.png)
-
-
+To check if everything is working select the task and click on "Run".
 
 
 ## Check if the script is executing a Data Scrubbing job
@@ -68,6 +79,7 @@ In DSM (web console) open the Storage Manager
 And select either Volumes or Disk Group and check if it's there are Parity Check's running
 
 NOTE: Depending on the amount of data stored on the disk and the total size of the disks this can take some time to complete...
+
 
 ## Disable SSH
 Because we don't need SSH to be open anymore it's security wise better to disable it.
