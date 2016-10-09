@@ -75,7 +75,7 @@ To check if everything is working select the task and click on "Run".
 ## Check if the script is executing a Data Scrubbing job
 In DSM (web console) open the Storage Manager
 
-![Check if script is doing something](/docs/check_tasks.png)
+![Check if script is doing something](/docs/check_task.png)
 And select either Volumes or Disk Group and check if it's there are Parity Check's running
 
 NOTE: Depending on the amount of data stored on the disk and the total size of the disks this can take some time to complete...
