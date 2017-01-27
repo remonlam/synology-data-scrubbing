@@ -63,7 +63,7 @@ Optional is to get an email when the script has run.
 If you want this enter your mail address.
 
 The last step is to fill in the location of the script that have been copied earlier.
-In my example it's /storage1/start_data_scrubbing.sh and click on OK to create the task.
+In my example it's /storage1/start_data_scrubbing.sh md2 and click on OK to create the task.
 
 ![Create task 6](/docs/create_task_6.png)
 Check if the tasks has been created.
